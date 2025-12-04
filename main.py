@@ -394,6 +394,7 @@ if __name__ == "__main__":
                 cursor.execute(query_build('INSERT INTO {} ({}) VALUES ({})'.format(table['table_name'], columns, values)))
     except Exception as e:
         print('An error ocured during database connection/setup: {}'.format(e))
+        
         sys.exit(1)
     
     app.run(host=args.address, port=args.port)
